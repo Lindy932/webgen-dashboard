@@ -1,0 +1,12 @@
+/* Video Background */
+.vid-bg {
+    position: fixed; /* Keeps the video in place as you scroll */
+    top: 0;
+    left: 0;
+    width: 100%; /* Covers the full width of the viewport */
+    height: 100%; /* Covers the full height of the viewport */
+    object-fit: cover; /* Ensures the video scales to fit the screen without distortion */
+    z-index: -1; /* Places the video behind all other content */
+  }
+
+  

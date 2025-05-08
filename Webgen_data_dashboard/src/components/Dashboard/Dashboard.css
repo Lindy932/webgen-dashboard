@@ -1,0 +1,56 @@
+/* Full dashboard container */
+.dashboard-container {
+    position: relative; /* Establish stacking context for the video and content */
+    display: flex; /* Arrange children in a row */
+    justify-content: space-between; /* Space out the content and image sections */
+    align-items: center; /* Align items vertically */
+    min-height: 100vh; /* Full viewport height */
+    text-align: center;
+    overflow: hidden; /* Prevent unwanted scrollbars */
+  }
+  
+  /* Video Background */
+  .dashboard-video {
+    position: absolute; /* Ensure video spans the container */
+    top: 0;
+    left: 0;
+    width: 100%; /* Cover the full width of the viewport */
+    height: 100%; /* Cover the full height of the viewport */
+    object-fit: cover; /* Scale and crop the video appropriately */
+    z-index: -1; /* Layer the video behind the content */
+  }
+  
+  /* Content box styling */
+  .content-box {
+    position: relative; /* Ensure it stays above the video background */
+    width: 70%; /* Covers 70% of the page width */
+    height: 80vh; /* Same height as the image section */
+    margin-left: 20px;
+    /* Glass effect styling */
+    background: rgba(243, 243, 243, 0.40);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(14.2px);
+    -webkit-backdrop-filter: blur(14.2px);
+    border: 1px solid rgba(243, 243, 243, 0.2);
+    color: #000; /* Black text for readability */
+  }
+  
+  /* Image box styling */
+  .image-box {
+    position: relative; /* Ensure it stays above the video background */
+    width: 30%; /* Takes up 30% of the available space */
+    height: 80vh; /* Same height as the content box */
+    display: flex; /* Center the image inside the box */
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px; /* Add spacing on the right */
+  }
+  
+  /* PNG Image Styling */
+  .dashboard-image {
+    width: 100%; /* Ensure the image scales to fit the container */
+    height: 98%; /* Scale proportionally */
+    object-fit: cover ; /* Preserve aspect ratio */
+  }
+  

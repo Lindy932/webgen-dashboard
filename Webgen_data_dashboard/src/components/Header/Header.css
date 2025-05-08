@@ -1,0 +1,298 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent; /* Start with a transparent background */
+  transition: background-color 0.5s ease; /* Smooth transition to white background */
+}
+
+header.white-background {
+  background-color: #0e1409;
+}
+
+.vid-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure video covers the entire area */
+  z-index: -1; /* Keeps video behind the content */
+}
+
+.banner {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 500px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header.animate-header .banner {
+  transform: translateY(-200px); /* Move the banner far up */
+  opacity: 0; /* Fade out */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  pointer-events: none; /* Prevent interaction after fade */
+}
+
+header.animate-header .section {
+  transform: translateY(-200px); /* Move the dropdown section far up */
+  opacity: 0; /* Fade out */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  pointer-events: none; /* Prevent interaction after fade */
+}
+
+header.hidden .banner,
+header.hidden .section {
+  display: none; /* Remove from layout completely */
+}
+
+
+h1 {
+  color: var(--white-color);
+  justify-content: center;
+}
+
+h2{
+  color:white;
+}
+
+h4 {
+  color: var(--white-color);
+  font-size: 18px;
+  margin: 10px;
+}
+
+.section {
+  margin: 10px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dropdown Styles */
+select {
+  width: 250px;
+  height: 25px;
+  text-align: center;
+  border-radius: 5px;
+  color: #333;
+}
+
+.custom-select {
+  width: 600px;
+  height: 40px;
+  padding: 5px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.custom-select:hover {
+  background-color: #eaeaea; /* Background color on hover */
+}
+
+.custom-select:focus {
+  border-color: #007BFF; /* Border color on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Focus glow effect */
+}
+
+.banner h1 {
+  overflow: hidden;
+  border-right: 0.15em solid gray; /* Typewriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto;
+  letter-spacing: 0.05em;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: gray;
+  }
+}
+
+.chart-container {
+  display: grid; /* Grid layout */
+  grid-template-columns: 1fr 1fr; /* Creates two equal columns for the charts */
+  gap: 30px; /* Adds space between grid items */
+  width: 20%; /* Ensures the container stretches fully */
+  padding:10px;
+}
+
+
+
+#chart{
+  background-color: white;
+  padding-left: 0%;
+}
+
+
+.chart-background {
+  position: absolute;
+  top: 50%;
+  flex-direction: column;
+  left: 22%; /* Chart starts at the left edge */
+  transform: translateY(-50%);
+  width: 100%; 
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  transition: background-color 0.3s ease-in-out; /* Smooth transition */
+  background-color: #eeeeee;
+}
+
+
+.banner1{
+  background-color: #0056b3;
+  margin: 10px;
+  padding: 10px;
+  left: 50%; /* Chart starts at the left edge */
+  height: fit-content;
+  width: 75%; /* Chart takes 60% of the width */
+  text-align: left;
+}
+
+
+canvas {
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Checklist Container Styles */
+.checklist-container {
+  position: absolute;
+  top: 50%;
+  left: 0%; /* Checklist starts after the chart (60% left alignment) */
+  transform: translateY(-50%);
+  width: 22%; /* Checklist takes 40% of the width */
+  height: 100%;
+  background-color: transparent; /* Light background */
+  padding: 15px; /* Add space inside container */
+  background-color: #070F2B;
+}
+
+.checklist-container h4 {
+  font-size: 18px;
+  color: #dddddd; /* Text color */
+  margin-bottom: 15px; /* Space below the title */
+}
+
+.checklist-container div {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between checkbox and label */
+  font-size: 16px;
+  color: #dddddd;
+  padding: 5px;
+}
+
+/* Style for the Deselect All button */
+.deselect-button {
+  display: block; /* Ensures it behaves as a block element */
+  margin: 20px auto 0; /* Center the button horizontally and add margin above */
+  padding: 10px 20px; /* Add space inside the button */
+  font-size: 16px; /* Adjust the font size */
+  color: white; /* Text color */
+  background-color: #007BFF; /* Button background color */
+  border: none; /* Remove border */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.deselect-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.dropdown-menu {
+  position: relative; /* Keeps the dropdown positioned within its container */
+  transform: translateY(-250px); /* Move the dropdown up by 20px */
+  left: 37%;
+  width: 25%; /* Ensure it adapts to its content */
+  text-align: center; /* Align content properly */
+  justify-content: center;
+  display: flex; /* Enables Flexbox layout */
+  flex-direction: row; /* Stacks label and dropdown vertically */
+  gap: 0.5rem; /* Adds spacing between label and dropdown */
+}
+
+
+
+.linechart{
+  flex-direction: column;
+  display: flex;
+  background-color: transparent;
+}
+
+#barChart {
+  padding: 10px;
+  width: 500px; /* Custom width for Bar Chart */
+  height: 300px; /* Custom height for Bar Chart */
+}
+
+#lineChart {
+  padding: 10px;
+  width: 400px; /* Custom width for Line Chart */
+  height: 200px; /* Custom height for Line Chart */
+  margin-top: 100px;
+}
+
+.chart-container.transparent,
+.linechart.transparent {
+  opacity: 0; /* Makes the container transparent */
+  transition: opacity 0.5s ease-in-out; /* Smooth transition */
+}
+
+.chart-container,
+.linechart {
+  opacity: 1; /* Fully visible */
+}
+
+
+
+
+
+
+
+
