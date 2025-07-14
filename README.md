@@ -15,6 +15,10 @@ The dashboard connects raw imaging metadata to user-friendly visual insights by:
 - 50,000+ Records (high volume reseaarch grade datasets)
 - Designed for medical research
 
+## 📊  REST APIs 
+- The Cancer Imaging Archive (TCIA) Public Access REST APIs [TCIA Website](https://wiki.cancerimagingarchive.net/display/Public/TCIA+Programmatic+Interface+REST+API+Guides)
+- The Cancer Genome Atlas Program (TCGA) Cancer Collection [TCGA Website](https://www.genome.gov/Funded-Programs-Projects/Cancer-Genome-Atlas)
+
 ## 🛠️ Tech Stack
   - Python
   - Requests
