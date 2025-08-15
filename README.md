@@ -1,6 +1,6 @@
-# 📊  TCIA Cancer Imaging Dashboard
+# 📊  Cancer Imaging Insights Platform
 
-An interactive Python-Dash web application that queries and visualizes metadata from The Cancer Imaging Archive (TCIA) to empower cancer researchers and medical analysts. Built to enhance data accessibility, this tool allows users to filter and compare over 50,000 imaging records across cancer types, imaging modalities, patient demographics and diagnoses. It is intended to support smarter, faster decision-making through dynamic and insightful visualizations.
+An interactive React.js web application that queries and visualizes metadata from The Cancer Imaging Archive (TCIA) to empower cancer researchers and medical analysts. Built to enhance data accessibility, this tool allows users to filter and compare over 50,000 imaging records across cancer types, imaging modalities, patient demographics and diagnoses. It is intended to support smarter, faster decision-making through dynamic and insightful visualizations.
 
 ## 🚀 Project Summary
 The dashboard connects raw imaging metadata to user-friendly visual insights by:
